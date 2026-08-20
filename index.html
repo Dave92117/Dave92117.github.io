@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>David Instefjord — Backend-utvikler</title>
-<meta name="description" content="David Instefjord — backend-utvikler i Bergen. Bygger og deployer fullstack-applikasjoner i React, Node og TypeScript. Tidligere yrkesdykker." />
+<title>David Instefjord — Fullstack-utvikler</title>
+<meta name="description" content="David Instefjord — fullstack-utvikler i Bergen. Bygger og deployer fullstack-applikasjoner i React, Node, TypeScript og JavaScript. Tidligere yrkesdykker." />
 
 <!-- Fonts load in the browser; safe to swap or remove. -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -295,6 +295,7 @@
   /* ---------- projects ---------- */
   .projects-grid { display: grid; gap: 20px; grid-template-columns: 1fr; margin-top: 40px; }
   @media (min-width: 780px) { .projects-grid { grid-template-columns: 1fr 1fr; } .card.feature { grid-column: 1 / -1; } }
+  @media (min-width: 1040px) { .projects-grid { grid-template-columns: 1fr 1fr 1fr; } }
 
   .card {
     border: 1px solid var(--line);
@@ -313,6 +314,7 @@
   .card-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
   .card h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; letter-spacing: -0.01em; margin-top: 14px; color: var(--foam); }
   .card p { color: var(--mist); font-size: 0.96rem; margin-top: 10px; }
+  .card .card-note { color: var(--mist-dim); font-size: 0.84rem; margin-top: 8px; }
   .chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
   .chip { font-family: var(--font-mono); font-size: 11px; color: var(--mist); border: 1px solid var(--line); border-radius: 6px; padding: 4px 9px; }
   .card-links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 22px; }
@@ -372,10 +374,10 @@
           <span data-no="Bergen · Norge — tilgjengelig for jobb" data-en="Bergen · Norway — available for hire"></span>
         </div>
         <h1>David Instefjord</h1>
-        <div class="role" data-no="Backend-utvikler" data-en="Backend Developer"></div>
+        <div class="role" data-no="Fullstack-utvikler" data-en="Fullstack Developer"></div>
         <p class="tagline"
-           data-no="Jeg bygger og deployer fullstack-applikasjoner i React, Node og TypeScript. Metodisk problemløser med bakgrunn som yrkesdykker — vant til grundige forberedelser, presisjon og ro når noe går galt."
-           data-en="I build and deploy full-stack applications in React, Node and TypeScript. A methodical problem-solver with a background as a commercial diver — used to thorough preparation, precision, and staying calm when something goes wrong."></p>
+           data-no="Jeg bygger og deployer fullstack-applikasjoner i React, Node, TypeScript og JavaScript. Metodisk problemløser med bakgrunn som yrkesdykker — vant til grundige forberedelser, presisjon og ro når noe går galt."
+           data-en="I build and deploy full-stack applications in React, Node, TypeScript and JavaScript. A methodical problem-solver with a background as a commercial diver — used to thorough preparation, precision, and staying calm when something goes wrong."></p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#prosjekter" data-no="Se prosjekter" data-en="View projects"></a>
           <a class="btn btn-ghost" href="#kontakt" data-no="Ta kontakt" data-en="Get in touch"></a>
@@ -392,7 +394,7 @@
         <div class="readout">
           <div class="readout-row">
             <span class="k">Stack</span>
-            <span class="v">TypeScript · React · Node · PostgreSQL</span>
+            <span class="v">JavaScript · TypeScript · React · Node · PostgreSQL</span>
           </div>
           <div class="readout-row">
             <span class="k" data-no="Utdanning" data-en="Education"></span>
@@ -416,12 +418,33 @@
       </div>
 
       <div class="projects-grid">
-        
+
+        <!-- MealMatch -->
+        <article class="card reveal">
+          <div class="card-head">
+            <span class="card-idx">01</span>
+            <span class="card-tag" data-no="Nyeste" data-en="Newest"></span>
+          </div>
+          <h3>MealMatch</h3>
+          <p data-no="Middagsvelger i stil med en papirspåmann: velg stemning, sveip gjennom retter, match med én og få oppskriften."
+             data-en="A dinner-picker in the style of a paper fortune-teller: pick a mood, swipe through dishes, get matched with one, and get the recipe."></p>
+          <p class="card-note"
+             data-no="Språket ligger i URL-en, ikke i klient-state, slik at html lang er riktig allerede i første respons. Null axe-core-brudd på alle ruter, i begge språk."
+             data-en="Language lives in the URL, not client state, so html lang is correct from the very first response. Zero axe-core violations on any route, in either language."></p>
+          <div class="chips">
+            <span class="chip">Next.js 16</span><span class="chip">React 19</span><span class="chip">TypeScript</span>
+            <span class="chip">Tailwind v4</span><span class="chip">Motion</span><span class="chip">a11y</span>
+          </div>
+          <div class="card-links">
+            <a href="https://mealmatch-instefjord.vercel.app/" target="_blank" rel="noopener"><span data-no="Live" data-en="Live"></span> <span class="arr">→</span></a>
+            <a href="https://github.com/Dave92117/mealmatch" target="_blank" rel="noopener"><span data-no="Kode" data-en="Code"></span> <span class="arr">→</span></a>
+          </div>
+        </article>
 
         <!-- Divelog -->
         <article class="card reveal">
           <div class="card-head">
-            <span class="card-idx">01</span>
+            <span class="card-idx">02</span>
           </div>
           <h3>Divelog</h3>
           <p data-no="Fullstack loggbok for dykk: brukerkontoer, lagring av dykk og et REST-API dokumentert med Swagger."
@@ -440,7 +463,7 @@
         <!-- Aquadykk -->
         <article class="card reveal">
           <div class="card-head">
-            <span class="card-idx">02</span>
+            <span class="card-idx">03</span>
           </div>
           <h3>Aquadykk</h3>
           <p data-no="Nettside for et kommersielt dykkerfirma — responsivt design og tydelig presentasjon av tjenestene."
